@@ -9,15 +9,16 @@ public class Odev_AsalSayi {
 
         }
     }
+    // Asallık kontrolü yapan metod
     public static boolean Asalmi(int sayi){
-        if (sayi<2){
+        if (sayi<2){    // 2'den küçük sayılar asal değildir
             return false;
         }
         for (int i=2;i<=Math.sqrt(sayi);i++){
-            if (sayi%i==0){
+            if (sayi%i==0){ // Eğer sayı bir başka sayıya tam bölünüyorsa asal değildir
                 return false;
             }
         }
-        return true;
+        return true;// Sayı yalnızca 1 ve kendisine bölünüyorsa asal sayıdır
     }
 }
